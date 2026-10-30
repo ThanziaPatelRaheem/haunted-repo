@@ -1,20 +1,33 @@
-# Haunted Repo
+<div align="center">
 
-**Echoes of Forgotten Code**
+# HAUNTED REPO
 
-_The past is never truly deleted._
+### Echoes of Forgotten Code
 
-What happens to code after it's deleted?
+**THE PAST IS NEVER TRULY DELETED.**
 
-Most developers move on. Git remembers.
+**HACKTOBERFEST 2026 | WEEK 4 — GHOST IN THE MACHINE**
 
-**Haunted Repo** is a local AI-powered developer tool that explores deleted files in Git repositories, recovers their forgotten code, and gives them one last chance to tell their stories.
+![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2026-EA4AAA?style=for-the-badge)
+![Challenge](https://img.shields.io/badge/DEV-Week_4_Challenge-111827?style=for-the-badge)
+![Gemma](https://img.shields.io/badge/AI-Gemma_3_4B-4285F4?style=for-the-badge)
+![Ollama](https://img.shields.io/badge/Inference-Local-374151?style=for-the-badge)
 
-Powered by **Gemma 3 4B running locally through Ollama**, Haunted Repo transforms Git history into an interactive graveyard where deleted files can share fictional ghost stories, have those stories narrated aloud, and face a final technical investigation.
+</div>
 
-Because apparently, even deleted code has unfinished business.
+---
 
-Built for the **Hacktoberfest 2026 Week 4 — Ghost in the Machine** challenge.
+## What if deleted code could speak?
+
+Most developers delete a file and move on.
+
+**Git remembers. Haunted Repo gives it a voice.**
+
+Haunted Repo is a local AI-powered developer tool that uncovers deleted files from Git history, recovers their code, and uses **Gemma 3 4B running locally through Ollama** to generate ghost stories and technical investigations.
+
+And if the ghost has something to say, you can let it read its story aloud.
+
+---
 
 ## Overview
 
@@ -30,6 +43,10 @@ Each recovered file gets two opportunities to speak:
 - **The Reaper's Verdict:** A technical investigation of the recovered code, including its likely purpose and potential issues.
 
 And if reading a ghost story isn't spooky enough, you can let the ghost read it aloud.
+
+Because apparently, even deleted code has unfinished business.
+
+---
 
 ## Features
 
@@ -92,6 +109,8 @@ The frontend combines a responsive layout with atmospheric visuals, animations, 
 
 The goal is to make exploring Git history feel less like reading a log and more like investigating a forgotten piece of software.
 
+---
+
 ## Screenshots
 
 ### Main Interface
@@ -110,6 +129,8 @@ The goal is to make exploring Git history feel less like reading a log and more 
 
 ![AI Technical Investigation](screenshots/haunted-repo-reapers-verdict.png)
 
+---
+
 ## Tech Stack
 
 | Category            | Technologies                          |
@@ -121,6 +142,8 @@ The goal is to make exploring Git history feel less like reading a log and more 
 | Local AI Runtime    | Ollama                                |
 | Voice Narration     | Web Speech API                        |
 | Sound Effects       | Browser audio playback                |
+
+---
 
 ## How It Works
 
@@ -144,7 +167,7 @@ This information forms the context for AI generation.
 
 ### 4. Generate with Gemma 3
 
-Haunted Repo uses two task-specific prompts:
+Haunted Repo uses two task-specific prompts.
 
 **Ghost Story Prompt**
 
@@ -162,6 +185,8 @@ The browser's speech synthesis functionality reads the generated ghost story alo
 
 Atmospheric audio effects complement the experience.
 
+---
+
 ## Why Gemma 3?
 
 Gemma 3 is central to Haunted Repo, rather than an optional addition.
@@ -178,8 +203,6 @@ The same local model supports both creative and technical tasks through differen
 ### Why Run Gemma Locally?
 
 Haunted Repo uses **Gemma 3 4B with Ollama**, allowing inference to run on the developer's machine.
-
-This approach provides several benefits:
 
 **Privacy**
 
@@ -201,6 +224,8 @@ Prompts and model configurations can be modified, and alternative compatible loc
 
 Using an open-weight model makes it possible to build and experiment with AI-powered developer tools while retaining control over the inference environment.
 
+---
+
 ## Getting Started
 
 ### Prerequisites
@@ -217,11 +242,11 @@ Haunted Repo runs locally. The backend must have filesystem access to the reposi
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone YOUR_GITHUB_REPOSITORY_URL
 cd haunted-repo
 ```
 
-Replace the placeholder with the actual GitHub repository URL.
+Replace `YOUR_GITHUB_REPOSITORY_URL` with the actual GitHub repository URL.
 
 ### 2. Install Ollama and Gemma 3
 
@@ -288,6 +313,8 @@ For testing, use a repository containing files that were previously committed an
 
 Select a recovered file to explore its code, generate a ghost story, or request a technical investigation.
 
+---
+
 ## Technical Considerations
 
 ### Git Evidence vs. AI Interpretation
@@ -312,6 +339,8 @@ Generation speed depends on the local machine, model size, prompt length, and av
 
 Speech synthesis voices and playback behavior vary by browser and operating system.
 
+---
+
 ## Limitations
 
 - Requires a local Git repository with accessible history.
@@ -320,6 +349,8 @@ Speech synthesis voices and playback behavior vary by browser and operating syst
 - Local inference requires sufficient hardware resources.
 - Narration depends on browser speech synthesis support.
 - Only repositories the user is authorized to access should be scanned.
+
+---
 
 ## Hacktoberfest 2026
 
@@ -330,6 +361,8 @@ The project explores the theme by recovering deleted source code, generating fic
 **Partner Prize Category: Best Use of Gemma**
 
 Gemma 3 4B powers the project's AI-generated ghost stories and technical investigations, running locally through Ollama.
+
+---
 
 ## Project Status
 
