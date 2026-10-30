@@ -19,203 +19,167 @@
 
 ## What if deleted code could speak?
 
-**Git remembers. Haunted Repo gives it a voice.**
+**Haunted Repo** is a developer-focused application that explores deleted files in Git history and brings them back to life using locally running, open-weight AI.
 
-Haunted Repo is a **local AI-powered developer tool** that uncovers deleted files from Git history and brings them back to life through storytelling, voice narration, and technical analysis.
+It combines **Git archaeology**, **AI storytelling**, and **technical code analysis** to uncover the stories behind forgotten code.
 
-| Discover                          | Resurrect                           | Investigate                            |
-| --------------------------------- | ----------------------------------- | -------------------------------------- |
-| Find deleted files in Git history | Generate ghost stories with Gemma 3 | Analyze recovered code with AI         |
-| Recover historical source code    | Hear the ghost narrate its story    | Examine potential technical weaknesses |
+| Discover                          | Resurrect                        | Investigate                              |
+| --------------------------------- | -------------------------------- | ---------------------------------------- |
+| Find deleted files in Git history | Generate fictional ghost stories | Analyze recovered code                   |
+| Recover historical source         | Give forgotten files a voice     | Explore purpose and potential weaknesses |
 
 **Built with:** React · Node.js · Express · Git · Gemma 3 4B · Ollama
 
 ---
 
-## See Haunted Repo in Action
+## Haunted Repo in Action
 
-### 01 — Enter the Graveyard
+### 01. Enter the Haunted Repository
 
-**Every repository has a past. Some files never made it out alive.**
+Scan a local Git repository and discover the code left behind.
 
-Scan a local Git repository and discover files that have disappeared from the current codebase.
+![Haunted Repo Landing Page](screenshots/haunted-repo-hero.png)
 
-![Haunted Repo Main Interface](screenshots/haunted-repo-hero.png)
+### 02. Explore the Graveyard
 
-### 02 — Meet the Forgotten Files
-
-Browse the deleted files discovered in Git history and select one to investigate.
+Browse deleted files discovered through Git history.
 
 ![Deleted Files Graveyard](screenshots/haunted-repo-graveyard.png)
 
-### 03 — Hear the Ghost's Story
+### 03. Listen to the Ghost's Story
 
-**Deleted from the repository. Not from memory.**
+Let Gemma transform recovered source code into a fictional confession.
 
-Let Gemma 3 transform recovered source code into a fictional story told by the forgotten file itself.
+![The Ghost's Story](screenshots/haunted-repo-ghost-story.png)
 
-![AI Ghost Story](screenshots/haunted-repo-ghost-story.png)
+### 04. Receive the Reaper's Verdict
 
-### 04 — Face the Reaper's Verdict
+Switch from storytelling to technical investigation.
 
-**Every ghost has a story. Every piece of code has a history worth examining.**
-
-Switch from storytelling to a technical investigation of the recovered code.
-
-![AI Technical Investigation](screenshots/haunted-repo-reapers-verdict.png)
+![The Reaper's Verdict](screenshots/haunted-repo-reapers-verdict.png)
 
 ---
 
 ## Features
 
-### 01. Repository Scanner
+### Repository Scanner & Graveyard
 
-**Find what your Git history has been hiding.**
+**Discover what Git remembers.**
 
-- **Local repository scanning** — Enter an absolute path to a Git repository.
-- **Git-based discovery** — Identify files deleted throughout the repository's history.
-- **Interactive exploration** — Browse discovered files in the graveyard.
-- **File selection** — Choose a deleted file for further investigation.
+- Scan local Git repositories using an absolute filesystem path.
+- Discover files deleted throughout the repository's history.
+- Explore an interactive graveyard and select files to investigate.
 
-### 02. Graveyard of Deleted Files
+### Git History & Code Recovery
 
-**Not every deleted file rests in peace.**
+**The evidence comes from Git. Not AI guesses.**
 
-- **Forgotten files, rediscovered** — Explore deleted files recovered from Git history.
-- **Interactive graveyard** — Select files and uncover their available historical evidence.
-- **Individual investigations** — Every file can become the subject of a ghost story or technical verdict.
+- Recover available historical source code.
+- Retrieve Git history and file evidence.
+- Supply recovered code as context for AI generation.
 
-### 03. Git History & Code Recovery
-
-**The evidence comes from Git. Not from AI guesses.**
-
-Before generating anything, Haunted Repo retrieves historical information directly from the repository.
-
-- **Source recovery** — Retrieve available historical file contents.
-- **Code inspection** — Examine the implementation that existed before deletion.
-- **Git evidence** — Use available repository history as context for AI generation.
-
-**Why this matters:** Gemma receives real source code and historical context rather than being asked to invent a file's contents.
-
-### 04. The Ghost's Story — Powered by Gemma 3
+### The Ghost's Story — Powered by Gemma 3
 
 **Every deleted file deserves one last confession.**
 
-What if an abandoned authentication module could tell the story of its own disappearance?
+- Generate fictional stories inspired by recovered source code.
+- Give forgotten files a first-person narrative.
+- Run Gemma 3 4B locally through Ollama.
 
-Haunted Repo uses **Gemma 3 4B** to create fictional narratives inspired by recovered code.
-
-- **Context-aware storytelling** — Stories are generated using the selected file's recovered contents.
-- **First-person ghost narratives** — Forgotten code gets a fictional voice.
-- **Local inference** — Generation runs through Ollama on the developer's machine.
-- **File-specific results** — Different recovered files provide different context for the model.
-
-**The twist:** Git tells us what survived in history. Gemma imagines what the forgotten code might say.
-
-### 05. Hear My Last Words — Ghost Narration
+### Hear My Last Words — Ghost Narration
 
 **The ghost doesn't just leave a message. It speaks.**
 
-- **Voice narration** — The browser's Web Speech API reads generated ghost stories aloud.
-- **Atmospheric sound effects** — Audio enhances the haunted experience.
-- **Browser-based speech** — No hosted text-to-speech API is required.
+- Narrate generated stories using the browser's Web Speech API.
+- Add atmospheric audio to the experience.
+- Use browser-based speech synthesis without a hosted TTS API.
 
-**Behind the scenes:** Gemma writes the story. The browser gives it a voice.
-
-### 06. The Reaper's Verdict — Technical Investigation
+### The Reaper's Verdict — Technical Investigation
 
 **Enough ghost stories. Time for the code review.**
 
-Haunted Repo switches from creative storytelling to technical interpretation using the same Gemma 3 model.
+- Analyze recovered source code using Gemma 3.
+- Explore a deleted file's likely purpose and implementation.
+- Identify potential weaknesses and areas worth investigating.
 
-- **Likely purpose** — Understand what the deleted file was designed to do.
-- **Implementation analysis** — Examine the recovered code's structure and behavior.
-- **Potential weaknesses** — Identify issues that may deserve closer inspection.
-- **Technical verdict** — Generate an AI interpretation based on the available source code.
-
-**Important:** The verdict is AI-generated and should not be treated as a confirmed explanation of why a file was deleted.
-
-### 07. Haunted Interface
+### Haunted Interface
 
 **Git archaeology, with a darker atmosphere.**
 
-- **Responsive frontend** — Built using React, Vite, and Tailwind CSS.
-- **Interactive graveyard** — Explore deleted files visually.
-- **Dedicated story and verdict experiences** — Switch between creative and technical investigation.
-- **Atmospheric visuals and audio** — Reinforce the Halloween theme without distracting from the developer experience.
+- Responsive interface built with React, Vite, and Tailwind CSS.
+- Interactive graveyard, story generation, and technical verdicts.
+- Halloween-inspired visuals and sound effects.
 
 ---
 
 ## How It Works
 
-**From a deleted file to a story worth hearing.**
+| Step | Process                                                 |
+| ---- | ------------------------------------------------------- |
+| 01   | Enter the absolute path to a local Git repository       |
+| 02   | Git identifies files deleted from repository history    |
+| 03   | Select a file and recover available historical evidence |
+| 04   | Send recovered context to Gemma 3 through Ollama        |
+| 05   | Generate a ghost story or technical verdict             |
 
-| Step   | Action   | Behind the Scenes                                                  |
-| ------ | -------- | ------------------------------------------------------------------ |
-| **01** | Scan     | Enter the absolute path to a local Git repository.                 |
-| **02** | Discover | The Express backend uses Git commands to identify deleted files.   |
-| **03** | Recover  | Retrieve available historical source code and Git evidence.        |
-| **04** | Generate | Gemma 3 creates a ghost story or technical verdict through Ollama. |
-| **05** | Narrate  | The browser reads the generated story aloud.                       |
+### Architecture
 
-### Under the Hood
+```text
+React + Vite Frontend
+         |
+         v
+Node.js + Express API
+         |
+         +----> Git CLI
+         |      Discover deleted files
+         |      Recover historical source
+         |
+         +----> Ollama (localhost)
+                Gemma 3 4B
+                Story generation
+                Technical analysis
+```
 
-**Git handles discovery and recovery. Gemma handles interpretation.**
-
-The application uses two task-specific prompts:
-
-| AI Task                            | Purpose                                                                            |
-| ---------------------------------- | ---------------------------------------------------------------------------------- |
-| **Ghost Story Prompt**             | Transform recovered source code and historical context into a fictional narrative. |
-| **Technical Investigation Prompt** | Interpret the recovered code's purpose, structure, and potential weaknesses.       |
-
-**Model:** `gemma3:4b`  
-**Runtime:** Ollama  
-**Inference:** Local machine  
-**Backend:** Node.js + Express
+**Git provides the historical evidence. Gemma interprets that evidence.**
 
 ---
 
 ## Why Gemma 3?
 
-### One Model. Two Very Different Personalities.
+Haunted Repo uses **Gemma 3 4B**, an open-weight language model running locally through Ollama.
 
-Gemma 3 isn't an optional chatbot attached to Haunted Repo. It powers the project's two central AI experiences.
+The same model supports two different experiences:
 
-|              | The Ghost's Story              | The Reaper's Verdict           |
-| ------------ | ------------------------------ | ------------------------------ |
-| **Goal**     | Creative storytelling          | Technical investigation        |
-| **Input**    | Recovered code and Git context | Recovered code and Git context |
-| **Output**   | Fictional narrative            | Technical interpretation       |
-| **AI Model** | Gemma 3 4B                     | Gemma 3 4B                     |
-| **Runtime**  | Ollama                         | Ollama                         |
+|          | The Ghost's Story                | The Reaper's Verdict             |
+| -------- | -------------------------------- | -------------------------------- |
+| Purpose  | Creative storytelling            | Technical investigation          |
+| Input    | Recovered source and Git context | Recovered source and Git context |
+| Output   | Fictional first-person narrative | AI-generated code interpretation |
+| Approach | Imaginative                      | Analytical                       |
 
-### Why Run Gemma Locally?
+### Why local, open-weight AI?
 
-**Open-weight AI is central to how Haunted Repo works.**
+- **Local inference:** Model execution takes place on the developer's machine.
+- **Code privacy:** Recovered source code does not need to be sent to a hosted AI API.
+- **Model flexibility:** The application can be adapted to use other locally supported models.
+- **Offline potential:** After installing the dependencies and downloading the model, AI generation can run without an external inference service.
+- **Open experimentation:** Prompts and model behavior can be explored without relying on a proprietary hosted model.
 
-- **Privacy first** — Recovered source code can be processed without uploading it to a hosted AI provider.
-- **Offline inference** — Once Ollama and Gemma are installed, generation can run without an internet connection.
-- **No per-request API fees** — AI inference uses local computing resources.
-- **Developer control** — Prompts and model configurations can be modified.
-- **Model flexibility** — Developers can experiment with other compatible local models.
-- **Open innovation** — The AI experience can be developed and customized without depending on a proprietary hosted inference API.
-
-**The advantage:** Developers retain control over their repository data and inference environment.
+Gemma is central to Haunted Repo: without the model, Git can recover deleted code, but it cannot generate the ghost's story or the Reaper's technical interpretation.
 
 ---
 
 ## Tech Stack
 
-| Layer                   | Technologies                          |
-| ----------------------- | ------------------------------------- |
-| **Frontend**            | React, Vite, Tailwind CSS, JavaScript |
-| **Backend**             | Node.js, Express                      |
-| **Repository Analysis** | Git CLI                               |
-| **AI Model**            | Google Gemma 3 4B                     |
-| **Local AI Runtime**    | Ollama                                |
-| **Voice Narration**     | Web Speech API                        |
-| **Sound Effects**       | Browser audio playback                |
+| Layer               | Technology       | Purpose                                  |
+| ------------------- | ---------------- | ---------------------------------------- |
+| Frontend            | React, Vite      | Interactive application                  |
+| Styling             | Tailwind CSS     | Responsive haunted interface             |
+| Backend             | Node.js, Express | API and application logic                |
+| Repository analysis | Git CLI          | File discovery and historical recovery   |
+| AI model            | Gemma 3 4B       | Story generation and code interpretation |
+| Local inference     | Ollama           | Run Gemma locally                        |
+| Narration           | Web Speech API   | Browser-based voice synthesis            |
 
 ---
 
@@ -223,44 +187,54 @@ Gemma 3 isn't an optional chatbot attached to Haunted Repo. It powers the projec
 
 ### Prerequisites
 
-| Requirement       | Purpose                                 |
-| ----------------- | --------------------------------------- |
-| **Node.js + npm** | Run the frontend and backend            |
-| **Git**           | Access repository history               |
-| **Ollama**        | Run local AI inference                  |
-| **Gemma 3 4B**    | Generate stories and technical verdicts |
+Make sure the following tools are installed:
+
+- **Node.js and npm** — To run the frontend and backend.
+- **Git** — To inspect repository history.
+- **Ollama** — To run the AI model locally.
+- **Gemma 3 4B** — The model used for AI generation.
+
+A machine with sufficient available memory is required to run Gemma 3 4B. Performance will depend on your hardware.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/ThanziaPatelRaheem/haunted-repo.git
 cd haunted-repo
 ```
 
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub clone URL.
+### 2. Download the AI Model
 
-### 2. Install Gemma 3
+Install Ollama from:
 
-Install Ollama from [ollama.com](https://ollama.com).
+https://ollama.com
 
-Download the model:
+Then download Gemma 3 4B:
 
 ```bash
 ollama pull gemma3:4b
 ```
 
-Make sure Ollama is running before starting the application.
+Make sure Ollama is running.
 
-### 3. Configure the Backend
+If the Ollama service is not already active, start it:
 
-From the project root:
+```bash
+ollama serve
+```
+
+On systems where the Ollama application already runs the service, you do not need to start a second instance.
+
+### 3. Start the Backend
+
+Open a terminal in the project directory:
 
 ```bash
 cd server
 npm install
 ```
 
-Create a `.env` file inside the `server/` directory:
+Create a `.env` file inside the `server` directory:
 
 ```env
 PORT=3000
@@ -274,11 +248,9 @@ Start the backend:
 npm run dev
 ```
 
-**Backend:** `http://localhost:3000`
-
 ### 4. Start the Frontend
 
-Open a new terminal from the project root:
+Open another terminal from the project root:
 
 ```bash
 cd client
@@ -286,75 +258,101 @@ npm install
 npm run dev
 ```
 
-**Frontend:** Open the development URL displayed by Vite, usually `http://localhost:5173`.
+Open the local URL displayed by Vite in your terminal.
 
-### 5. Scan a Repository
+---
 
-Enter the absolute path to a local Git repository.
+## Try It with a Demo Repository
 
-**Example test repository:**
+You don't need an existing project with deleted files to test Haunted Repo.
 
-```text
-/Users/tnz/Developer/Sandbox/haunted-demo-repo
+Create a small Git repository containing a file that gets committed and later deleted.
+
+### 1. Create the Demo Repository
+
+Open a separate terminal outside the Haunted Repo application directory:
+
+```bash
+mkdir haunted-demo-repo
+cd haunted-demo-repo
+
+git init
+git config user.name "Demo Developer"
+git config user.email "demo@example.com"
+
+mkdir src
+echo "export const oldAuth = () => true;" > src/oldAuth.js
+
+git add .
+git commit -m "Add old authentication module"
+
+git rm src/oldAuth.js
+git commit -m "Remove old authentication module"
 ```
 
-**Note:** This is a local example path from the development environment. Replace it with a repository path on your own machine.
+### 2. Find the Repository Path
 
-For meaningful results, use a repository containing files that were previously committed and subsequently deleted.
+Run:
 
-Then:
+```bash
+pwd
+```
 
-1. **Scan** the repository.
-2. **Select** a deleted file from the graveyard.
-3. **Explore** its recovered code and available Git history.
-4. **Generate** a ghost story or technical verdict.
-5. **Listen** to the ghost story using browser narration.
+Copy the absolute path printed by your terminal.
+
+### 3. Scan the Repository
+
+1. Open Haunted Repo in your browser.
+2. Paste the demo repository's absolute path.
+3. Run the repository scan.
+4. Select `src/oldAuth.js` from the graveyard.
+5. Generate **The Ghost's Story** or **The Reaper's Verdict**.
+
+The deleted file remains available in Git history even though it no longer exists in the current working directory.
 
 ---
 
 ## Technical Considerations & Limitations
 
-| Area                    | What to Know                                                                     |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| **Git evidence**        | Historical recovery depends on Git data still available in the repository.       |
-| **AI accuracy**         | Ghost stories are fictional, and technical verdicts may contain inaccuracies.    |
-| **Local access**        | The backend can only scan repositories accessible through its filesystem.        |
-| **Remote repositories** | Direct GitHub repository scanning and cloud uploads are not currently supported. |
-| **Performance**         | AI generation speed depends on hardware, model size, and prompt length.          |
-| **Narration**           | Speech voices and playback behavior depend on the browser and operating system.  |
-| **Security**            | Only scan repositories you are authorized to access.                             |
+| Area              | Consideration                                                                                                                 |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Local access      | Designed for local development and use on trusted machines                                                                    |
+| Filesystem access | The backend receives local repository paths; do not expose the API publicly without appropriate access controls               |
+| Git history       | Deleted files must have been committed to Git to be discoverable                                                              |
+| Recovery          | Historical source recovery depends on available Git history                                                                   |
+| AI interpretation | Technical verdicts are model-generated interpretations, not verified explanations of deletion                                 |
+| Performance       | Generation speed depends on local hardware and model availability                                                             |
+| Speech synthesis  | Available voices and narration quality depend on the browser and operating system                                             |
+| Offline use       | Local AI inference does not require a hosted model API, but initial setup requires downloading dependencies and model weights |
+
+**Security:** Haunted Repo is intended to run locally. Do not deploy its filesystem-scanning backend as a publicly accessible service without adding authentication, repository path restrictions, and other appropriate protections.
 
 ---
 
 ## Hacktoberfest 2026
 
-### Ghost in the Machine — Week 4
+Haunted Repo was created for the **DEV Hacktoberfest Week 4 — Ghost in the Machine** challenge.
 
-**Challenge:** DEV Hacktoberfest 2026  
-**Theme:** Ghost in the Machine  
-**Partner Prize Category:** Best Use of Gemma
+The project explores the theme through deleted code, fictional ghosts, and local open-weight AI.
 
-Haunted Repo brings the theme to life through a developer-focused experience:
+**Challenge focus:** Building an application where open-source or open-weight AI is essential to the experience.
 
-- **The past** — Recover deleted files from Git history.
-- **The haunting** — Generate fictional ghost stories about forgotten source code.
-- **The voice** — Narrate those stories through browser speech synthesis.
-- **The investigation** — Use Gemma 3 to analyze recovered implementations.
-- **The open approach** — Run an open-weight AI model locally through Ollama.
+**Model:** Gemma 3 4B, running locally with Ollama.
 
-**Why Gemma matters:** Gemma 3 powers both the creative and technical experiences at the heart of Haunted Repo.
+**Theme:** Bringing forgotten code back from the dead.
 
 ---
 
 ## Project Status
 
-**Functional local application — Hacktoberfest 2026 challenge project.**
+Haunted Repo is a functional challenge project built around local Git analysis and AI-powered exploration.
 
-### Potential Improvements
+Potential future improvements include:
 
-- Richer Git history visualizations.
-- Support for additional local AI models.
-- More detailed technical investigation capabilities.
+- Additional repository analysis capabilities.
+- More detailed historical comparisons.
+- Support for configurable local AI models.
+- Improved narration and audio controls.
 
 ---
 
