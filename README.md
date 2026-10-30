@@ -34,11 +34,13 @@ It combines **Git archaeology**, **AI storytelling**, and **technical code analy
 
 ## Haunted Repo in Action
 
-### Watch the Demo
+### 🎬 Watch the Demo
+
+▶️ **[Click here to watch the Haunted Repo demo on YouTube](https://youtu.be/ofWmAw0uET8)**
 
 See Haunted Repo in action — from scanning a local Git repository to generating ghost stories and revealing the Reaper's Verdict.
 
-[![Watch the Haunted Repo Demo](https://img.youtube.com/vi/ofWmAw0uET8/maxresdefault.jpg)](https://youtu.be/ofWmAw0uET8)
+[![Haunted Repo Video Demo](https://img.youtube.com/vi/ofWmAw0uET8/maxresdefault.jpg)](https://youtu.be/ofWmAw0uET8)
 
 ### 01. Enter the Haunted Repository
 
