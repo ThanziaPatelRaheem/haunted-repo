@@ -21,3 +21,49 @@
     animation: none;
   }
 }
+@keyframes graveyard-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.graveyard-reveal {
+  animation: graveyard-reveal 550ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graveyard-reveal {
+    animation: none;
+  }
+}
+@keyframes ghost-beam {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0.3;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(310%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ghost-beam {
+    animation: none;
+  }
+}

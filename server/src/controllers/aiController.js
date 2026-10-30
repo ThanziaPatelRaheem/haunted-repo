@@ -3,6 +3,20 @@ import {
   generateGhostStory,
 } from "../services/ollamaServices.js";
 
+const getOllamaConnectionError = (error) => {
+  const message = error?.message || "";
+  const causeCode = error?.cause?.code || error?.code;
+
+  return (
+    causeCode === "ECONNREFUSED" ||
+    causeCode === "ECONNRESET" ||
+    /ECONNREFUSED|ECONNRESET/i.test(message)
+  );
+};
+
+const OLLAMA_UNAVAILABLE_MESSAGE =
+  "☠ The spirits are unreachable. Local AI (Ollama) is not running. Start Ollama and try again.";
+
 export async function analyzeCode(req, res) {
   try {
     const { file } = req.body;
@@ -28,11 +42,15 @@ export async function analyzeCode(req, res) {
       analysis,
     });
   } catch (error) {
-    console.error("AI analysis failed:", error.message);
+    console.error("AI analysis failed:", error);
 
-    return res.status(500).json({
+    const ollamaUnavailable = getOllamaConnectionError(error);
+
+    return res.status(ollamaUnavailable ? 503 : 500).json({
       success: false,
-      message: "Unable to analyze deleted code",
+      message: ollamaUnavailable
+        ? OLLAMA_UNAVAILABLE_MESSAGE
+        : "Unable to analyze deleted code",
     });
   }
 }
@@ -62,11 +80,15 @@ export async function createGhostStory(req, res) {
       story,
     });
   } catch (error) {
-    console.error("Ghost story generation failed:", error.message);
+    console.error("Ghost story generation failed:", error);
 
-    return res.status(500).json({
+    const ollamaUnavailable = getOllamaConnectionError(error);
+
+    return res.status(ollamaUnavailable ? 503 : 500).json({
       success: false,
-      message: "Unable to generate ghost story",
+      message: ollamaUnavailable
+        ? OLLAMA_UNAVAILABLE_MESSAGE
+        : "Unable to generate ghost story",
     });
   }
 }
